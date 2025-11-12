@@ -5,9 +5,7 @@ export default function Hero() {
       <p className="text-xl text-gray-700 max-w-xl">
         A non-profit organization for lifestyle development of people in the grassroot economy.
       </p>
-      <p className="mt-8 text-gray-600 italic">
-        Site under construction — stay tuned for more updates.
-      </p>
+      <p className="mt-8 text-gray-600 italic">Site under construction — stay tuned for updates.</p>
     </section>
   );
 }
