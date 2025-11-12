@@ -1,28 +1,31 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
-import About from './pages/About'
-import About from './pages/Vission'
-import Portfolio from './pages/Gallary'
-import Contact from './pages/Contact'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-export default function App() {
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Programs from "./pages/Programs";
+import GetInvolved from "./pages/GetInvolved";
+import News from "./pages/News";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact";
+
+function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/vission" element={<Vission />} />
-          <Route path="/gallary" element={<Gallary />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </main>
+    <div className="font-sans">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/get-involved" element={<GetInvolved />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
-  )
+  );
 }
+
+export default App;
